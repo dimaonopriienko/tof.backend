@@ -9,6 +9,14 @@ const schema = mongoose.Schema({
     unique: true,
     trim: true,
   },
+  recognitionPersonId: {
+    type: String,
+    require: true,
+    unique: true,
+  },
+  recogitionFaceIds: {
+    type: [String],
+  },
 });
 
 schema.set('timestamps', true);

@@ -9,5 +9,6 @@ module.exports = {
   'rules': {
     'max-len': 0,
     'new-cap': 0,
+    'require-jsdoc': 0,
   },
 };

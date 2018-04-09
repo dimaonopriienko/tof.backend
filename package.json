@@ -16,10 +16,13 @@
     "debug": "~2.6.3",
     "dotenv": "^4.0.0",
     "express": "~4.15.2",
+    "express-fileupload": "^0.4.0",
+    "express-promise-router": "^3.0.1",
     "mongoose": "^5.0.13",
     "mongoose-unique-validator": "^2.0.0",
     "morgan": "~1.8.1",
-    "phase-control": "^0.1.10"
+    "phase-control": "^0.1.10",
+    "project-oxford": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

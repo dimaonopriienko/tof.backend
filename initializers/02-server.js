@@ -2,11 +2,15 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const http = require('http');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
+const PromiseRouter = require('express-promise-router');
 
 const debug = require('debug')('app');
 const serverConfig = require('../configs/server');
 
 module.exports = function() {
+  this.Router = PromiseRouter;
+
   this.set('port', serverConfig.port);
 
   this._server = http.createServer(this);
@@ -49,6 +53,6 @@ module.exports = function() {
   this.use(logger('dev'));
   this.use(bodyParser.json());
   this.use(bodyParser.urlencoded({extended: false}));
-
   this.use(cors());
+  this.use(fileUpload());
 };
